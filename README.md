@@ -3,4 +3,6 @@ Project based on Amazon Fire TV Stick related hardware (started 2017-12-24 - spo
 
 ![voice functions](/images/FireTvVoiceButtonFunctions.png)
 
+Resources [Alexa](https://github.com/alexa)
+
 
