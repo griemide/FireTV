@@ -5,4 +5,7 @@ Project based on Amazon Fire TV Stick related hardware (started 2017-12-24 - spo
 
 Resources [Alexa](https://github.com/alexa)
 
+![datasheet](/images/datasheet.gif)
+
+
 
