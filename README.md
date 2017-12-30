@@ -7,7 +7,7 @@ Project based on Amazon Fire TV Stick related hardware (started 2017-12-24 - spo
 
 Alexa development on: [Github](https://github.com/alexa)
 
-Simulate Echo devive on web browser: [ECHOsim](https://echosim.io/)
+Simulate Echo devive on web browser: [ECHOsim.io](https://echosim.io/) (runs on Firefox or Chrome browser only)
 
 Own: [Projects & Configurations](projects/readme.md)
 
