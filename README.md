@@ -10,7 +10,8 @@ Link to: [Alexa App Sign in](https://alexa.amazon.de/)
 Alexa development on: [Github](https://github.com/alexa)
 and installation guide on: [Raspberry Pi](https://github.com/alexa/alexa-avs-sample-app/wiki/Raspberry-Pi)
 
-Simulate Echo devive on web browser: [ECHOsim.io](https://echosim.io/) (runs on Firefox or Chrome browser only)
+Simulate Echo devive on web browser: [ECHOsim.io](https://echosim.io/) 
+(runs on [Firefox](file://C:/Users/Public/Downloads/FirefoxPortable/FirefoxPortable.exe) or Chrome browser only)
 
 Own: [Projects & Configurations](projects/readme.md)
 
