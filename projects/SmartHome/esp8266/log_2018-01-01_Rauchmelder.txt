@@ -1,0 +1,126 @@
+
+ ets Jan  8 2013,rst cause:2, boot mode:(3,6)
+
+load 0x4010f000, len 1384, room 16 
+tail 8
+chksum 0x2d
+csum 0x2d
+v09f0c112
+~ld
+ÿ
+Booting...
+uuid: 38323636-4558-4dda-9188-cda0e68e879c
+
+Connecting to WiFi .........
+>Connected to Wifi ssid: Rauchmelder
+IP address: 192.168.1.95
+
+Connecting to UDP
+Connection to UDP successful
+HTTP Server started ..
+User interaction required: Ask Alexa to discover devices
+
+Received packet of size 97
+From 192.168.1.91, port 52678
+Request:
+M-SEARCH * HTTP/1.1
+HOST:239.255.255.250:1900
+MAN:"ssdp:discover"
+ST:upnp:rootdevice
+MX:3
+
+
+Responding to search request ...
+
+Sending response to 192.168.1.91
+Port : 52678
+UDP Response sent: 
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=86400
+DATE: Fri, 15 Apr 2016 04:56:29 GMT
+EXT:
+LOCATION: http://192.168.1.95:80/setup.xml
+OPT: "http://schemas.upnp.org/upnp/1/0/"; ns=01
+01-NLS: b9200ebb-736d-4b93-bf03-835149d13983
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: urn:Belkin:device:**
+USN: uuid:Socket-1_0-38323636-4558-4dda-9188-cda0e68e879c::upnp:rootdevice
+X-User-Agent: redsonic
+
+
+########## Responding to setup.xml ... ########
+
+Sending :<?xml version="1.0"?><root><device><deviceType>urn:Belkin:device:controllee:1</deviceType><friendlyName>testdevice</friendlyName><manufacturer>Belkin International Inc.</manufacturer><modelName>Socket</modelName><modelNumber>3.1415</modelNumber><modelDescription>Belkin Plugin Socket 1.0</modelDescription>
+<UDN>uuid:Socket-1_0-38323636-4558-4dda-9188-cda0e68e879c</UDN><serialNumber>221517K0101769</serialNumber><binaryState>0</binaryState><serviceList><service><serviceType>urn:Belkin:service:basicevent:1</serviceType><serviceId>urn:Belkin:serviceId:basicevent1</serviceId><controlURL>/upnp/control/basicevent1</controlURL><eventSubURL>/upnp/event/basicevent1</eventSubURL><SCPDURL>/eventservice.xml</SCPDURL></service></serviceList></device></root>
+
+
+
+Received packet of size 97
+From 192.168.1.91, port 52678
+Request:
+M-SEARCH * HTTP/1.1
+HOST:239.255.255.250:1900
+MAN:"ssdp:discover"
+ST:upnp:rootdevice
+MX:3
+
+
+Responding to search request ...
+
+Sending response to 192.168.1.91
+Port : 52678
+UDP Response sent: 
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=86400
+DATE: Fri, 15 Apr 2016 04:56:29 GMT
+EXT:
+LOCATION: http://192.168.1.95:80/setup.xml
+OPT: "http://schemas.upnp.org/upnp/1/0/"; ns=01
+01-NLS: b9200ebb-736d-4b93-bf03-835149d13983
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: urn:Belkin:device:**
+USN: uuid:Socket-1_0-38323636-4558-4dda-9188-cda0e68e879c::upnp:rootdevice
+X-User-Agent: redsonic
+
+
+########## Responding to setup.xml ... ########
+
+Sending :<?xml version="1.0"?><root><device><deviceType>urn:Belkin:device:controllee:1</deviceType><friendlyName>testdevice</friendlyName><manufacturer>Belkin International Inc.</manufacturer><modelName>Socket</modelName><modelNumber>3.1415</modelNumber><modelDescription>Belkin Plugin Socket 1.0</modelDescription>
+<UDN>uuid:Socket-1_0-38323636-4558-4dda-9188-cda0e68e879c</UDN><serialNumber>221517K0101769</serialNumber><binaryState>0</binaryState><serviceList><service><serviceType>urn:Belkin:service:basicevent:1</serviceType><serviceId>urn:Belkin:serviceId:basicevent1</serviceId><controlURL>/upnp/control/basicevent1</controlURL><eventSubURL>/upnp/event/basicevent1</eventSubURL><SCPDURL>/eventservice.xml</SCPDURL></service></serviceList></device></root>
+
+
+
+Received packet of size 97
+From 192.168.1.91, port 52678
+Request:
+M-SEARCH * HTTP/1.1
+HOST:239.255.255.250:1900
+MAN:"ssdp:discover"
+ST:upnp:rootdevice
+MX:3
+
+
+Responding to search request ...
+
+Sending response to 192.168.1.91
+Port : 52678
+UDP Response sent: 
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=86400
+DATE: Fri, 15 Apr 2016 04:56:29 GMT
+EXT:
+LOCATION: http://192.168.1.95:80/setup.xml
+OPT: "http://schemas.upnp.org/upnp/1/0/"; ns=01
+01-NLS: b9200ebb-736d-4b93-bf03-835149d13983
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: urn:Belkin:device:**
+USN: uuid:Socket-1_0-38323636-4558-4dda-9188-cda0e68e879c::upnp:rootdevice
+X-User-Agent: redsonic
+
+
+########## Responding to setup.xml ... ########
+
+Sending :<?xml version="1.0"?><root><device><deviceType>urn:Belkin:device:controllee:1</deviceType><friendlyName>testdevice</friendlyName><manufacturer>Belkin International Inc.</manufacturer><modelName>Socket</modelName><modelNumber>3.1415</modelNumber><modelDescription>Belkin Plugin Socket 1.0</modelDescription>
+<UDN>uuid:Socket-1_0-38323636-4558-4dda-9188-cda0e68e879c</UDN><serialNumber>221517K0101769</serialNumber><binaryState>0</binaryState><serviceList><service><serviceType>urn:Belkin:service:basicevent:1</serviceType><serviceId>urn:Belkin:serviceId:basicevent1</serviceId><controlURL>/upnp/control/basicevent1</controlURL><eventSubURL>/upnp/event/basicevent1</eventSubURL><SCPDURL>/eventservice.xml</SCPDURL></service></serviceList></device></root>
+
+
