@@ -5,7 +5,7 @@ Project based on Amazon Fire TV Stick related hardware (started 2017-12-24 - spo
 
 ## Resources 
 
-Link to: [Alexa App Sign in](https://www.amazon.com/ap/signin)
+Link to: [Alexa App Sign in](https://alexa.amazon.de/)
 
 Alexa development on: [Github](https://github.com/alexa)
 and installation guide on: [Raspberry Pi](https://github.com/alexa/alexa-avs-sample-app/wiki/Raspberry-Pi)
