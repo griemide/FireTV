@@ -11,7 +11,7 @@ Alexa development on: [Github](https://github.com/alexa)
 and installation guide on: [Raspberry Pi](https://github.com/alexa/alexa-avs-sample-app/wiki/Raspberry-Pi)
 
 Simulate Echo devive on web browser: [ECHOsim.io](https://echosim.io/) 
-runs on [Firefox](file://C:/Users/Public/Downloads/FirefoxPortable/FirefoxPortable.exe) or Chrome browser only
+runs on [Firefox](C:/Users/Public/Downloads/FirefoxPortable/FirefoxPortable.exe) or Chrome browser only
 
 Own: [Projects & Configurations](projects/readme.md)
 
