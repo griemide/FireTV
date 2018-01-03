@@ -3,8 +3,17 @@
 #include <WiFiUdp.h>
 #include <functional>
 
+#define sketchversion "2018-01-02"
+
 /*
- referncences: see http://www.upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.0-20080424.pdf
+ referncences: 
+ see http://www.upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v1.0-20080424.pdf
+ see http://192.168.0.242/ (HP LaserJet P1505n)
+ see http://192.168.0.242/
+ see http://192.168.0.242/setup.xml
+ see http://192.168.0.242/eventservice.xml
+ see http://192.168.1.95/ (Rauchmelder)
+ see http://192.168.1.86/index.html
 */
 
 void prepareIds();        // uuid (contains last 3 bytes of the device mac address)
@@ -15,10 +24,10 @@ void turnOnRelay();
 void turnOffRelay();
 void sendRelayState();
 
-//const char* ssid = "HP LaserJet P1505n";
-//const char* password = "vQ1tASKOUu";
-const char* ssid = "Rauchmelder";
-const char* password = "af104-nat";
+const char* ssid = "HP LaserJet P1505n";
+const char* password = "vQ1tASKOUu";
+//const char* ssid = "Rauchmelder";
+//const char* password = "af104-nat";
 String friendlyName = "testdevice"; // Alexa device name
 
 unsigned int localPort = 1900;      // local port to listen on
@@ -49,6 +58,7 @@ void setup() {
   delay(10);
   Serial.println("");
   Serial.println("Booting...");
+  Serial.print("Sketch version: "); Serial.println(sketchversion);
 
   // Setup Relay
   pinMode(relayPin, OUTPUT);
@@ -179,17 +189,18 @@ void respondToSearch() {
 
 void startHttpServer() {
     HTTP.on("/", HTTP_GET, [](){
-      Serial.println("Got Request on root ...\n");
+      Serial.println("Got HTTP GET request on / (root) ...\n");
       HTTP.send(200, "text/plain", "Prerequite: user interaction required => you should ask Alexa for new devices first ...");
     });
 
     HTTP.on("/index.html", HTTP_GET, [](){
-      Serial.println("Got Request index.html ...\n");
+      Serial.println("Got HTTP GET request index.html ...\n");
       HTTP.send(200, "text/plain", "Hello World!");
     });
 
     HTTP.on("/upnp/control/basicevent1", HTTP_POST, []() {
-      Serial.println("########## Responding to  /upnp/control/basicevent1 ... ##########");      
+      Serial.println("Got HTTP GET request on /upnp/control/basicevent1 ...\n");
+      Serial.println("############ Responding to /upnp/control/basicevent1 ... ##########");      
 
       //for (int x=0; x <= HTTP.args(); x++) {
       //  Serial.println(HTTP.arg(x));
@@ -221,7 +232,8 @@ void startHttpServer() {
     });
 
     HTTP.on("/eventservice.xml", HTTP_GET, [](){
-      Serial.println("########## Responding to eventservice.xml ... ########\n");
+      Serial.println("Got HTTP GET request on /eventservice.xml ...\n");
+      Serial.println("############ Responding to eventservice.xml ... ########\n");
       String eventservice_xml = "<scpd xmlns=\"urn:Belkin:service-1-0\">"
         "<actionList>"
           "<action>"
@@ -266,7 +278,8 @@ void startHttpServer() {
     });
     
     HTTP.on("/setup.xml", HTTP_GET, [](){
-      Serial.println("########## Responding to setup.xml ... ########\n");
+      Serial.println("Got HTTP GET request on /setup.xml ...\n");
+      Serial.println("############ Responding to setup.xml ... ########\n");
 
       IPAddress localIP = WiFi.localIP();
       char s[16];
@@ -332,7 +345,7 @@ boolean connectWifi(){
   
   if (state){
     Serial.println("");
-    Serial.print(">Connected to Wifi ssid: ");
+    Serial.print(" Connected to Wifi ssid: ");
     Serial.println(ssid);
     Serial.print("IP address: ");
     Serial.println(WiFi.localIP());
