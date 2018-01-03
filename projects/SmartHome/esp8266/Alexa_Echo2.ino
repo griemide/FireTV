@@ -2,6 +2,7 @@
 #include <ESP8266WebServer.h>
 #include <WiFiUdp.h>
 #include <functional>
+#include "credentials.h"
 
 #define sketchversion "2018-01-02"
 
@@ -24,10 +25,8 @@ void turnOnRelay();
 void turnOffRelay();
 void sendRelayState();
 
-const char* ssid = "HP LaserJet P1505n";
-const char* password = "vQ1tASKOUu";
-//const char* ssid = "Rauchmelder";
-//const char* password = "af104-nat";
+const char* ssid = SSID1; // or SSID2
+const char* password = PASSWORD;
 String friendlyName = "testdevice"; // Alexa device name
 
 unsigned int localPort = 1900;      // local port to listen on
